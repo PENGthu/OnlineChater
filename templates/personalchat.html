@@ -1,0 +1,12 @@
+<html>
+        <p>您使用的昵称:{{ user_nickname }}</p>
+        <p>您的真实名称:{{ g.user.username }}</p>
+        <p>私聊对象:{{ receiver }}</p>
+        <textarea id="chat" cols="80" rows="20" >{{ history_show }}</textarea><br><br>
+    <form method="POST">
+        {{ form.text.label }}:{{ form.text }}
+        {{ form.submit() }}
+    </form>
+        <a href="/personalchat_exit" >离开私聊</a>
+    </body>
+</html>

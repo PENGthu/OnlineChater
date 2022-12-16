@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<script type="text/javascript" src="/static/js/login.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>WJP的网络聊天室_登录</title>
+</head>
+<body>
+<script type="text/javascript">
+    if({{ register_error }}==0){
+        alert("注册成功")
+    }
+</script>
+<script type="text/javascript">
+    if({{ error_type }}==1){
+        alert("该用户在数据库中不存在，请注册或重试！")
+    }
+    else if({{ error_type }}==2){
+        alert("用户密码输入错误，请重试！")
+    }
+    else if ({{ error_type }}==3){
+        alert("输入格式有误，请检查用户名和密码长度是否符合要求！")
+    }
+</script>
+<h1>登录</h1>
+<p>请输入您的用户名和密码:</p>
+<form method="POST">
+    <div>用户名:<input type="text" name="username"></div><br>
+    <div>密码:<input type="password" name="password"></div><br>
+    <button type="submit" onclick="loginStatusWindow()">登录！</button><br>
+
+</form>
+<br>
+<a href="/register">注册</a>
+<p><b>注意:</b>用户名长度为2-10位，密码长度为6-10位。密码设置要有一定的强度，不能过于简单。</p>
+</body>
+</html>

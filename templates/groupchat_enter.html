@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<script type="text/javascript">
+    if({{ errorcode }}==1){
+        alert("不存在此聊天室，请先创建!")
+    }
+    if({{ errorcode }}==2){
+        alert("该聊天室人数已满，请重新选择聊天室加入!")
+    }
+</script>
+<head>
+    <meta charset="UTF-8">
+    <title>进入聊天室</title>
+</head>
+<body>
+    <h1>进入聊天室</h1>
+    <p>您当前登录的账号为:{{ username_now }}</p>
+    <p>请输入你想使用的聊天昵称和进入的聊天室编号:</p>
+    <form method="post">
+        {{ form.user_nickname.label }}:{{ form.user_nickname() }}<br>
+        {{ form.room.label }}:{{ form.room() }}<br>
+        {{ form.submit() }}
+    </form>
+<a href="/home">回到首页</a>
+</body>
+</html>

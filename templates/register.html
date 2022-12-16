@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<script type="text/javascript" src="/static/js/register.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>WJP的网络聊天室_注册</title>
+</head>
+<body>
+<!--
+<script type="text/javascript">
+    function RegisterStatusWindow(){
+        if( {{ register_error }}==1)
+        {
+            alert("用户名密码格式有误或两次密码输入不一致，请重试！")
+        }
+        else
+        {
+            alert("注册成功")
+        }
+    }
+</script>
+-->
+<h1>注册</h1>
+<p>请输入您的用户名和密码:</p>
+<form method="POST">
+    <div>用户名:<input type="text" name="username"></div><br>
+    <div>密码:<input type="password" name="password"></div><br>
+    <div>确认密码:<input type="password" name="password_2"></div><br>
+    <div><button type="submit">注册</button></div>
+</form>
+<br>
+<button onclick="back_to_login()">回到登录界面</button>
+<p><b>注意:</b>用户名长度为2-10位，密码长度6-10位。密码设置要有一定的强度，不能过于简单。<br>
+    <!--
+以上为游客注册。如您期望通过邮箱注册，请点击<a href="/register_mail">这里</a>。 </p>-->
+</body>
+</html>

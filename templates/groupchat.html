@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>WJP的聊天室——编号: {{ room }}</title>
+    <script type="text/javascript">
+
+    </script>
+    </head>
+    <body>
+        <p>聊天室编号: {{ room }}</p>
+        <p>您使用的昵称:{{ user_nickname }}</p>
+        <p>您的真实名称:{{ username_now }}</p>
+        <!--<h3><b>注意：请不要刷新此界面,否则可能导致表单提交失败！</b></h3>-->
+        <textarea id="chat" cols="80" rows="20" >{{ history_show }}</textarea><br><br>
+    <form method="POST">
+        {{ form.text.label }}:{{ form.text }}
+        {{ form.submit() }}
+
+    </form>
+        已经注册到该聊天室的用户:{{ userlist }}<br>
+        <a href="/groupchat_exit" >离开聊天室</a>
+    </body>
+</html>

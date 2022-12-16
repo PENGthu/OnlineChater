@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/css/dashboard.css">
+    <script src="/static/js/home.js"></script>
+
+    <title>首页</title>
+</head>
+<body>
+<h1>首页</h1>
+登录成功！<br>
+您当前登录的账号为:{{ username_now }}<br>
+<p><b>聊天室列表：</b></p>
+{{ rooms }}<br><br>
+<p><b>好友列表:</b></p>
+{{ friends }}<br><br>
+<a href="/logout" onclick="logout_success()">登出</a><br>
+<a href="/groupchat_enter">进入聊天室</a><br>
+<a href="/group_init">创建聊天室</a><br>
+<a href="/personalchat_enter">单人聊天</a><br>
+<a href="/add_friend">添加好友</a><br><br>
+<a href="/savelog">保存聊天记录到本地</a>
+</body>
+</html>

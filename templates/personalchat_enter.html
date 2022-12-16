@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>进入私聊</title>
+</head>
+<script type="text/javascript">
+    if({{ errorcode }}==1){
+        alert("该用户不是您的好友，请重试！")
+    }
+</script>
+<body>
+<h1>进入私聊</h1>
+<p>您当前登录的账号为:{{ g.user.username }}</p>
+    <p>请输入你想使用的聊天昵称和私聊对象:</p>
+    <form method="post">
+        {{ form.user_nickname.label }}:{{ form.user_nickname() }}<br>
+        {{ form.friend.label }}:{{ form.friend() }}<br>
+        {{ form.submit() }}
+    </form>
+<a href="/personalchat"></a>
+<a href="/home">回到主界面</a>
+</body>
+</html>
